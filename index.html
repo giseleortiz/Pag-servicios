@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    
+    <title>Servicios de Desarrollo y Diseño Web</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="index">
+    <header>
+        <h1>Bienvenido a Nuestro Servicio de Desarrollo y Diseño Web</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="carousel">
+            <img src="img/carousel1.jpg" class="carousel-image" alt="Imagen de ejemplo 1">
+            <img src="img/carousel2.jpg" class="carousel-image" alt="Imagen de ejemplo 2">
+            <img src="img/carousel3.jpg" class="carousel-image" alt="Imagen de ejemplo 3">
+        </section>
+        <div id="carouselServices" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselServices" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselServices" data-slide-to="1"></li>
+              <li data-target="#carouselServices" data-slide-to="2"></li>
+              <li data-target="#carouselServices" data-slide-to="3"></li>
+            </ol>
+            <hr>
+            <section>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="services">
+                  <h2>Nuestros Servicios</h2>
+                  <p>Ofrecemos una amplia gama de servicios de desarrollo y diseño web para satisfacer las necesidades de nuestros clientes. Nuestros servicios incluyen:</p>
+                  <ul>
+                    <li><strong>Desarrollo Web:</strong> Creamos sitios web dinámicos y funcionales utilizando las últimas tecnologías y mejores prácticas. Nos especializamos en desarrollo front-end y back-end, asegurando que su sitio web sea rápido, seguro y escalable.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="services">
+                  <h2>Nuestros Servicios</h2>
+                  <p>Ofrecemos una amplia gama de servicios de desarrollo y diseño web para satisfacer las necesidades de nuestros clientes. Nuestros servicios incluyen:</p>
+                  <ul>
+                    <li><strong>Diseño Web:</strong> Diseñamos sitios web atractivos y fáciles de usar que reflejan la identidad de su marca. Nuestro enfoque en el diseño centrado en el usuario garantiza una experiencia de usuario excepcional.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="services">
+                  <h2>Nuestros Servicios</h2>
+                  <p>Ofrecemos una amplia gama de servicios de desarrollo y diseño web para satisfacer las necesidades de nuestros clientes. Nuestros servicios incluyen:</p>
+                  <ul>
+                    <li><strong>SEO y Marketing Digital:</strong> Ayudamos a mejorar la visibilidad de su sitio web en los motores de búsqueda y a atraer más tráfico mediante estrategias efectivas de SEO y marketing digital.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="services">
+                  <h2>Nuestros Servicios</h2>
+                  <p>Ofrecemos una amplia gama de servicios de desarrollo y diseño web para satisfacer las necesidades de nuestros clientes. Nuestros servicios incluyen:</p>
+                  <ul>
+                    <li><strong>Soporte y Mantenimiento:</strong> Ofrecemos soporte continuo y servicios de mantenimiento para asegurar que su sitio web esté siempre actualizado y funcionando sin problemas.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselServices" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselServices" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Siguiente</span>
+            </a>
+          </div>
+        </section>
+
+        <footer>
+            <div class="footer-container">
+                <div class="whatsapp">
+                    <a href="https://wa.me/NUMERO_DE_WHATSAPP" target="_blank">
+                        <img src="img/wasap.png" alt="WhatsApp" class="footer-icon">
+                    </a>
+                </div>
+                <div class="chatbot">
+                  <a href="#modalChatbot">
+                      <img src="img/chat.png" alt="Logo del Chatbot" class="chatbot-logo">
+                  </a>
+              </div>
+              
+              <!-- Modal del chatbot -->
+              <div id="modalChatbot" class="modal">
+                  <div class="modal-content">
+                      <!-- Contenido del modal, como el chatbot -->
+                      <div id="chatbot"></div>
+                  </div>
+              </div>
+              
+              <!-- JavaScript para mostrar y ocultar el modal -->
+              <script>
+                  // Cuando se carga el DOM
+                  document.addEventListener("DOMContentLoaded", function() {
+                      // Obtener el modal
+                      var modal = document.getElementById("modalChatbot");
+              
+                      // Obtener el enlace de la imagen del chatbot
+                      var chatbotLink = document.querySelector(".chatbot-logo");
+              
+                      // Cuando se hace clic en el enlace
+                      chatbotLink.addEventListener("click", function(event) {
+                          // Mostrar el modal
+                          modal.style.display = "block";
+                          // Prevenir el comportamiento predeterminado del enlace
+                          event.preventDefault();
+                      });
+              
+                      // Cuando se hace clic en cualquier lugar fuera del modal, cerrar el modal
+                      window.onclick = function(event) {
+                          if (event.target == modal) {
+                              modal.style.display = "none";
+                          }
+                      };
+                  });
+              </script>
+            </div>
+            <div id="modalChatbot" class="modal">
+              <div class="modal-content">
+                  <!-- Contenido del modal, como el chatbot -->
+                  <div id="chatbot"></div>
+                  <!-- Formulario para la entrada del usuario -->
+                  <form id="chatbotForm">
+                      <input type="text" id="userInput" class="user-input" placeholder="Escribe tu pregunta...">
+                      <button type="submit" class="send-button">Enviar</button>
+                  </form>
+                  <!-- Botón para cerrar el modal -->
+                  <button id="closeModal" class="close-button">Cerrar</button>
+              </div>
+          </div>
+        </footer>
+        
+        <script src="js/scripts.js"></script>
+    </body>
+    </html>
